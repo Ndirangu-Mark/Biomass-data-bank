@@ -1,0 +1,269 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Arkhip', sans-serif;
+    font-size: 17px;
+}
+
+/* Section for the Navigation Bar */
+.navbar {
+    display: flex;
+    position: static;
+    top: 0;
+    width: 100%;
+    padding: 30px;
+    z-index: 2;
+    color: white;
+    background-color: #116466;
+}
+
+.navbar .menu {
+    float: left;
+}
+
+.navbar .wishlist {
+    float: right;
+    position: relative;
+    top: 10px;
+    padding-right: 30px;
+    right: 2%;
+}
+
+.navbar .menu a,
+.navbar .wishlist a {
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    font-family: 'Beach Lombok', sans-serif;
+    font-size: 15px;
+}
+
+.navbar .menu a > i {
+    padding: 15px;
+    font-size: 1.2em;
+}
+
+.navbar .brand {
+    margin: auto;
+}
+
+.navbar .brand p {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+/* Media Queries for Navbar */
+@media screen and (max-width:800px) {
+    .navbar .wishlist,
+    .navbar .search {
+        display: none;
+    }
+}
+
+/* Section for carousel */
+
+.slide {
+    display: none;
+  }
+  
+  .fade {
+    animation: fade 1.5s ease-in-out;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+.carousel {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 0;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.slide {
+    padding: 30px;
+}
+
+.carousel .slide img {
+    height: 300px;
+    width:700px;
+}
+
+.carousel > .slide > .image-overlay > p {
+    color: white;
+    position: relative;
+    bottom: 50px;
+    font-size: 25px;
+}
+
+/* Media Queries for Carousel */
+@media screen and (max-width: 800px) {
+    .carousel .slide img {
+        width: 100%;
+        height: 300px;
+        display: block;
+    }    
+}
+
+@media screen and (max-width: 546px) {
+    .carousel {
+        width: 100%;
+    }
+
+    .carousel .slide {
+        border: none;
+        box-shadow: none;
+        outline: none;
+    }
+
+    .carousel .slide img {
+        width: 100vw;
+        height: 300px;
+        display: block;
+    }
+}
+
+/* Section for Infographics */
+.infographic {
+    margin: auto;
+    width: 100%;
+    padding-top: 30px;
+}
+
+.infographic > .infographic-container1,
+.infographic > .infographic-container3 {
+    display: grid;
+    grid-template-columns: 67% 33%;
+}
+
+.infographic > .infographic-container2 {
+    display: grid;
+    grid-template-columns: 33% 67%;
+}
+
+.infographic > .infographic-container1 > .text-container,
+.infographic > .infographic-container2 > .text-container,
+.infographic > .infographic-container3 > .text-container {
+    padding: 0 20px 0 20px;
+    height: 300px;
+}
+
+.infographic > .infographic-container1 > .text-container > p,
+.infographic > .infographic-container2 > .text-container > p,
+.infographic > .infographic-container3 > .text-container > p {
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 30%;
+}
+
+.infographic > .infographic-container1 .image-section,
+.infographic > .infographic-container2 .image-section,
+.infographic > .infographic-container3 .image-section {
+    width: 100%;
+}
+
+.infographic > .infographic-container1 .image-section img,
+.infographic > .infographic-container2 .image-section img,
+.infographic > .infographic-container3 .image-section img {
+    object-fit: fill;
+    height: 300px;
+    width: 100%;
+}
+
+/* Media Queries */
+@media screen and (max-width:850px) {
+    .infographic > .infographic-container1,
+    .infographic > .infographic-container2,
+    .infographic > .infographic-container3 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+
+    .infographic > .infographic-container1 > .text-container > p,
+    .infographic > .infographic-container2 > .text-container > p,
+    .infographic > .infographic-container3 > .text-container > p {
+        font-size: 20px;
+        position: relative;
+        top: 30%;
+    }  
+}
+
+
+/* Section for Footer */
+footer {
+    background-color: #116466;
+    padding: 30px;
+    margin-top:30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer-wrapper1, .footer-wrapper2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-wrapper2 {
+    justify-content: end;
+    align-items: end;
+    text-align: end;
+}
+
+.footer-wrapper1 > p,
+.footer-wrapper1 > a,
+.footer-wrapper2 > p,
+.footer-wrapper2 > a {
+    color: white;
+    font-size: 10px;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+/* Hover effects for Footer */
+.footer-wrapper1 > a:hover,
+.footer-wrapper2 > a:hover {
+   text-decoration: underline;
+   color: ivory;
+   transition: ease-in-out 0.2s;
+   cursor: pointer;
+}
+
+/* Media Queries */
+@media screen and (max-width:850px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .footer-wrapper1, .footer-wrapper2 {
+        padding: 5px;
+    }
+
+    .footer-wrapper2 {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        text-align: center;
+        align-items: center;
+        line-height: 1.8;
+    }
+}
