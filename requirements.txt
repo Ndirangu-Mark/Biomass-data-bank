@@ -1,0 +1,4 @@
+flask
+pandas
+pyproj
+gunicorn
