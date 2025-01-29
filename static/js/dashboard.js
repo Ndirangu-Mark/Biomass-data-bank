@@ -54,11 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Feature Ranking
 const correlations = {
-    NGRDI: 24,
-    ExGR: 23,
-    VARI: 21,
-    MGRVI: 17,
-    GRRI: 16
+    VARI: 38.2,
+    MGRVI: 35.1,
+    ExGR: 26.7,
 };
 
 // Generate a bar chart for feature importance using Plotly
